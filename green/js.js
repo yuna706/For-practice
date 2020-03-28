@@ -13,10 +13,10 @@ $(function(){
 
     img.eq(idx).css("left", 0);
     setInterval(function(){
-        let next = (idx+1) % imgs.length;
+        let next = (idx+1) % img.length;
 
-        img.eq(next).css("left","1200px").animate({"left":0}, 500);
-        img.eq(idx).animate({"left":"-1200px"}, 500);
+        img.eq(next).css("left","1200px").animate({"left":0}, 1000);
+        img.eq(idx).animate({"left":"-1200px"}, 1000);
         idx = next;
     }, 3000);
 
