@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: '맑은고딕';
+    box-sizing: border-box;
+    color: #333333;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333333;
+}
+
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* header */
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+header> h1{
+    width: 200px;
+    height: 100%;
+}
+header> h1 img{
+    width: 100%;
+    height: 100%;
+}
+
+header> ul{
+    width: 600px;
+    height: 50px;
+    margin: 25px;
+    display: flex;
+}
+header> ul> li{
+    width: 25%;
+    height: 100%;
+}
+header> ul> li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header> ul li:hover > a{
+    color: #fff;
+    background: #015088;
+}
+header> ul> li> a{
+    font-size: 20px;
+    font-weight: bold;
+    background: #30a3f3;
+}
+.sub{
+    display: none;
+}
+.sub> li{
+    height: 40px;
+}
+.sub> li> a{
+    background: #0066ad;
+    color: #fff;
+}
+
+/* slide */
+#slide{
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+#slide> .img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#slide> .img:nth-child(1){
+    display: block;
+}
+#slide> .img> img{
+    width: 100%;
+    height: 100%;
+}
+#slide> .img> p{
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 100px;
+}
+
+/* contents */
+#contents{
+    height: 200px;
+    display: flex;
+}
+#contents> div{
+    width: 33.33%;
+    height: 100%;
+}
+#contents> div> h2, .tab_b{
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+#contents> div> h2{
+    border-bottom: 1px solid #000;
+}
+
+/* tab */
+.tab_b{
+    margin-bottom: 0;
+    padding: 0;
+    display: flex;
+}
+.tab_b> p{
+    padding: 5px 20px;
+    margin-right: 0;
+    border: 1px solid #000;
+    border-bottom: 1px solid #fff;
+    background: #015088;
+    color: #ccc;  
+}
+.tab_b> p.on{
+    color: #333;
+    background: #fff;
+}
+.tab_c> *{
+    border: 1px solid #000;
+    height: 155px;
+    justify-content: space-around;
+    display: none;
+}
+.tab_c> *.on{
+    display: flex;
+}
+.tab_c> ul{
+    flex-direction: column;
+    padding: 0 10px;
+}
+.tab_c> ul> li> a:hover{
+    color: #015088;
+    text-decoration: underline;
+}
+.tab_c> .gall{
+    justify-content: space-around;
+    align-items: center;
+}
+.tab_c> .gall img{
+    width: 50%;
+    height: auto;
+}
+
+/* banner, 바로가기*/
+.banner> a> img, .go> a> img{
+    width: 100%;
+    height: 145px;
+}
+
+/* footer */
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+footer> h1{
+    width: 200px;
+    height: 100px;
+}
+footer> h1 img{
+    width: 100%;
+    height: 100%;
+}
+footer> div{
+    width: 1000px;
+    height: 100%;
+}
+footer> div> div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu_b> a{
+    display: inline-block;
+    margin: 10px;
+}
+.menu_b> a:hover{
+    color: #015088;
+    text-decoration: underline;
+}
+
+/* 팝업화면 */
+.popup{
+    width: 500px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    display: none;
+}
+.popup> h3{
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.popup> button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+}
