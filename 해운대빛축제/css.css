@@ -1,0 +1,207 @@
+@charset "uft-8";
+/* 초기화 */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: '맑은 고딕';
+    color: #222328;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #222328;
+    display: inline-block;
+}
+
+/* 감싸는 부분 */
+.wrap{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+    background: #fff;
+}
+
+/* 헤더 영역 */
+header{
+    width: 200px;
+    height: 100%;
+}
+header> h1{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 메뉴바 */
+header> ul> li{
+    margin: 0 20px;
+    background: #c5cae9;
+}
+header> ul> li a{
+    height: 40px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header> ul li:hover> a{
+    background: #303f9f;
+    color: #fff;
+}
+.sub{
+    display: none;
+    background: #e8eaf6;
+}
+.sub> li> a{
+    height: 30px;
+    font-weight: normal;
+}
+
+/* 슬라이드 */
+#slide{
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+#slide> img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#slide> img:nth-child(1){
+    display: block;
+}
+
+/* contents */
+#contents{
+    height: 200px;
+    display: flex;
+}
+#contents> div{
+    width: 33.33%;
+    height: 100%;
+}
+
+/* 탭 메뉴 */
+.tab_b{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.tab_b> div{
+    padding: 10px 20px;
+    background: #303f9f;
+    color:#ccc;
+    border-radius: 10px 10px 0 0;
+}
+.tab_b> div.on{
+    background: #e8eaf6;
+    color: #222328;
+}
+
+.tab_c> ul{
+    display: none;
+    height: 150px;
+    margin: 0 10px;
+}
+.tab_c> ul.on{
+    display: flex;
+    justify-content: space-around;
+}
+.notice_style{
+    flex-direction: column;
+}
+.notice_style a:hover{
+    color: #303f9f;
+    text-decoration: underline;
+}
+.gall_style{
+    align-items: center;
+}
+.gall_style img{
+    width: 90%;
+}
+
+/* 배너, 바로가기 */
+.banner> a, .go> a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner> a> img, .go> a> img{
+    width: 95%;
+    height: 90%;
+}
+
+/* 푸터영역 */
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background: #c5cae9;
+}
+footer> h2{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer> div{
+    width: 700px;
+    height: 100%;
+}
+footer> div> div{
+    height: 50%;
+}
+
+.menu_b> ul{
+    display: flex;
+}
+.menu_b> ul> li> a{
+    margin: 10px;
+}
+.menu_b> ul> li> a:hover{
+    color: #303f9f;
+    text-decoration: underline;
+}
+
+.copy{
+    text-align: center;
+}
+
+/* popup */
+.popup{
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: none;
+}
+.popup> h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.popup> button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
