@@ -26,7 +26,6 @@ a{
 
 /* 헤더 영역 */
 header{
-    width: 200px;
     height: 100%;
 }
 header> h1{
@@ -127,7 +126,7 @@ header> ul li:hover> a{
     align-items: center;
 }
 .gall_style img{
-    width: 90%;
+    width: 100px;
 }
 
 /* 배너, 바로가기 */
