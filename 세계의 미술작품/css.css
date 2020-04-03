@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/*주조색 #4A4948 보조색 #CAAC7D*/
+/*초기화*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "맑은 고딕";
+    color: #888;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #888;
+}
+body{
+    background: #fff;
+}
+
+/*감싸기*/
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*헤더부분*/
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+.nav{
+    height: 50px;
+    display: flex;
+    margin: 25px;
+}
+.nav> li a{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.nav li:hover > a{
+    color: #fff;
+    background: #888;
+}
+.nav> li> a{
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.sub{
+    display: none;
+}
+.sub> li> a{
+    height: 30px;
+}
+
+/*슬라이드*/
+#slide{
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+#slide> .img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+}
+#slide> .img:nth-child(1){
+    top: 0;
+}
+#slide> .img> img{
+    width: 100%;
+    height: 100%;
+}
+#slide> .img> span{
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    background: rgba(202, 172, 125, 0.8);
+    padding: 10px 20px;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 30px;
+    text-shadow: 1px 1px 3px #333;
+}
+
+/*콘텐츠*/
+#contents{
+    height: 200px;
+    display: flex;
+}
+#contents> div{
+    width: 33.33%;
+    padding: 10px;
+}
+#contents> div> h2{
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    color: #555;
+}
+#contents> div> ul{
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+.notice> ul{
+    flex-direction: column;
+}
+.notice a:hover{
+    color: #CAAC7D;
+    text-decoration: underline;
+}
+
+.gall> ul{
+    align-items: center;
+}
+.gall img{
+    width: 100px;
+}
+
+.banner img{
+    width: 100%;
+    height: 130px;
+}
+
+/*푸터 부분*/
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer> ul{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+footer> ul img{
+    width: 40px;
+}
+
+/*팝업*/
+.popup{
+    display: none;
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    border: 1px solid #555;
+}
+.popup> h2{
+    color: #555;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #888;
+}
+.popup> button{
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 15px;
+}
